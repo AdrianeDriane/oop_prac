@@ -1,4 +1,4 @@
-package BookChallenge;
+package ConstructorChallenges;
 
 public class Book {
     private String title;
