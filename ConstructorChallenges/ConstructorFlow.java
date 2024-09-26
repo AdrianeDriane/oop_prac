@@ -23,6 +23,6 @@ class Child extends Parent {
 
 public class ConstructorFlow {
     public static void main(String[] args) {
-        Child obj = new Child(1);
+        new Child(1);
     }
 }
