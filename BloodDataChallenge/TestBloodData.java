@@ -8,13 +8,20 @@ public class TestBloodData {
 
         BloodData patient = new BloodData();
 
-        System.out.print("Enter Blood Type: ");
-        String bloodType = scan.nextLine();
-        patient.setBlood(bloodType);
+        boolean validBloodType = false;
+        boolean validRhFactor = false;
 
-        System.out.print("Enter Rh Factor: ");
-        String rhFactor = scan.nextLine();
-        patient.setRH(rhFactor);
+        while (!validBloodType) {
+            System.out.print("Enter Blood Type: ");
+            String bloodType = scan.nextLine();
+            validBloodType = patient.setBlood(bloodType);
+        }
+
+        while (!validRhFactor) {
+            System.out.print("Enter Rh Factor: ");
+            String rhFactor = scan.nextLine();
+            validRhFactor = patient.setRH(rhFactor);
+        }
 
         patient.displayBloodInfo();
     }
