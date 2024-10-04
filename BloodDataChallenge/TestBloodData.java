@@ -11,12 +11,14 @@ public class TestBloodData {
         boolean validBloodType = false;
         boolean validRhFactor = false;
 
+        // error trapping while blood type is invalid
         while (!validBloodType) {
             System.out.print("Enter Blood Type: ");
             String bloodType = scan.nextLine();
             validBloodType = patient.setBlood(bloodType);
         }
 
+        // error trapping while rh factor is invalid
         while (!validRhFactor) {
             System.out.print("Enter Rh Factor: ");
             String rhFactor = scan.nextLine();
