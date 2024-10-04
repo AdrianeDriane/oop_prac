@@ -13,11 +13,13 @@ public class BloodData {
         return bloodType;
     }
 
-    public void setBlood(String bloodType) {
+    public boolean setBlood(String bloodType) {
         if (bloodType.equals("A") || bloodType.equals("B") || bloodType.equals("AB") || bloodType.equals("O")) {
             this.bloodType = bloodType;
+            return true;
         } else {
             System.out.println("Invalid blood type. Please enter A, B, AB, or O.");
+            return false;
         }
     }
 
@@ -25,11 +27,13 @@ public class BloodData {
         return rhFactor;
     }
 
-    public void setRH(String rhFactor) {
+    public boolean setRH(String rhFactor) {
         if (rhFactor.equals("+") || rhFactor.equals("-")) {
             this.rhFactor = rhFactor;
+            return true;
         } else {
             System.out.println("Invalid Rh factor. Please enter + or -.");
+            return false;
         }
     }
 
